@@ -5,9 +5,9 @@ import {
 import {OtherScreen} from '../screens/home/OtherScreen';
 import {FormScreen} from '../screens/FormScreen/FormScreen';
 import {ButtonsScreen} from '../screens/ButtonsScreen/ButtonsScreen';
-import {RootStackParamList} from './types';
+import {Colors} from '../style/Colors';
 
-const Tab = createBottomTabNavigator<RootStackParamList>();
+const Tab = createBottomTabNavigator();
 
 const BottomTabNavigator = () => {
   return (
@@ -15,10 +15,12 @@ const BottomTabNavigator = () => {
       tabBar={props => <BottomTabBar {...props} />}
       screenOptions={{
         headerShown: false,
+        tabBarLabelStyle: {color: 'white'},
+        tabBarStyle: {backgroundColor: Colors.primary},
       }}>
-      <Tab.Screen name="FormScreen" component={FormScreen} />
-      <Tab.Screen name="OtherScreen" component={OtherScreen} />
-      <Tab.Screen name="ButtonsScreen" component={ButtonsScreen} />
+      <Tab.Screen name="Form" component={FormScreen} />
+      <Tab.Screen name="Info" component={OtherScreen} />
+      <Tab.Screen name="Buttons" component={ButtonsScreen} />
     </Tab.Navigator>
   );
 };

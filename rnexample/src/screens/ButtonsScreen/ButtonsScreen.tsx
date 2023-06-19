@@ -51,6 +51,7 @@ export const ButtonsScreen = () => {
             marginTop: 18,
             borderColor: 'gray',
             borderWidth: StyleSheet.hairlineWidth,
+            marginBottom: 20,
           }}
           labelStyle={{color: '#fff'}}
         />
