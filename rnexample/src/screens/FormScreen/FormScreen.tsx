@@ -8,15 +8,15 @@ import {addFavoritePet, addName} from '../../store/form/formActions';
 import {useNavigation} from '@react-navigation/native';
 import {Colors} from '../../style/Colors';
 import {FormState} from '../../store/form/formReducer';
+import {DeviceText} from '../../components/DeviceText';
 
 export const FormScreen = () => {
   const dispatch = useDispatch();
   const [error, setError] = useState<string>('');
-  const stored = useSelector((state: FormState) => state);
-  const [name, setName] = useState<string>(stored.name ?? '');
-  const [favoritePet, setFavoritePet] = useState<string>(
-    stored.favoritePet ?? '',
-  );
+  const storedName = useSelector((state: FormState) => state.name);
+  const storedPet = useSelector((state: FormState) => state.favoritePet);
+  const [name, setName] = useState<string>(storedName ?? '');
+  const [favoritePet, setFavoritePet] = useState<string>(storedPet ?? '');
   const navigation = useNavigation();
 
   const handleSubmit = () => {
@@ -40,6 +40,7 @@ export const FormScreen = () => {
       <SafeAreaView style={styles.container}>
         <TopActionBar title="User Details" items={[]} />
         <View style={styles.formContainer}>
+          <DeviceText />
           <Text style={styles.label}>Name:</Text>
           <AppTextInput
             value={name}

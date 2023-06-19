@@ -4,6 +4,7 @@ import {Colors} from '../../style/Colors';
 import {AppButton} from '../../components/AppButton';
 import {useSelector} from 'react-redux';
 import {FormState} from '../../store/form/formReducer';
+import {DeviceText} from '../../components/DeviceText';
 
 export const ButtonsScreen = () => {
   const name = useSelector((state: FormState) => state.name);
@@ -18,6 +19,7 @@ export const ButtonsScreen = () => {
         ]}
       />
       <View style={styles.formContainer}>
+        <DeviceText />
         <View style={{flex: 1}} />
         <Text style={styles.title}>4 Variations of a button</Text>
         <AppButton

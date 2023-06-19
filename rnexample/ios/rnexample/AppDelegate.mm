@@ -1,6 +1,11 @@
 #import "AppDelegate.h"
 
 #import <React/RCTBundleURLProvider.h>
+#import <React/RCTBridgeModule.h>
+
+@interface RCT_EXTERN_MODULE(EmulatorNoticeModule, NSObject)
+RCT_EXTERN_METHOD(isEmulator: (RCTPromiseResolveBlock)resolve reject: (RCTPromiseRejectBlock)reject)
+@end
 
 @implementation AppDelegate
 

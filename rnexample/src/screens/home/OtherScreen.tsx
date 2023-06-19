@@ -4,6 +4,7 @@ import {Colors} from '../../style/Colors';
 import {AppButton} from '../../components/AppButton';
 import {useSelector} from 'react-redux';
 import {FormState} from '../../store/form/formReducer';
+import {DeviceText} from '../../components/DeviceText';
 
 export const OtherScreen = () => {
   const name = useSelector((state: FormState) => state.name);
@@ -17,6 +18,7 @@ export const OtherScreen = () => {
           </Text>,
         ]}
       />
+      <DeviceText />
       <View style={styles.formContainer}>
         <Text style={styles.title}>
           Investec is a distinctive bank and wealth manager for
