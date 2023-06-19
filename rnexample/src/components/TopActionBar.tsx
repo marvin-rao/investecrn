@@ -1,5 +1,6 @@
 import {ReactNode} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import {Colors} from '../style/Colors';
 
 type TopActionBarProps = {
   title: string;
@@ -22,14 +23,14 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingVertical: 12,
     paddingHorizontal: 16,
-    backgroundColor: '#fff',
+    backgroundColor: Colors.primary,
     borderBottomColor: '#ebebeb',
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
   title: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#333',
+    color: '#fff',
   },
   itemsContainer: {
     flexDirection: 'row',

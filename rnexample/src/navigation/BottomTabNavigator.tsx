@@ -2,11 +2,12 @@ import {
   BottomTabBar,
   createBottomTabNavigator,
 } from '@react-navigation/bottom-tabs';
-import {HomeScreen} from '../screens/home/HomeScreen';
+import {OtherScreen} from '../screens/home/OtherScreen';
 import {FormScreen} from '../screens/FormScreen/FormScreen';
-import {VariationsScreen} from '../screens/ButtonsScreen/ButtonsScreen';
+import {ButtonsScreen} from '../screens/ButtonsScreen/ButtonsScreen';
+import {RootStackParamList} from './types';
 
-const Tab = createBottomTabNavigator();
+const Tab = createBottomTabNavigator<RootStackParamList>();
 
 const BottomTabNavigator = () => {
   return (
@@ -15,9 +16,9 @@ const BottomTabNavigator = () => {
       screenOptions={{
         headerShown: false,
       }}>
-      <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Form" component={FormScreen} />
-      <Tab.Screen name="Variations" component={VariationsScreen} />
+      <Tab.Screen name="FormScreen" component={FormScreen} />
+      <Tab.Screen name="OtherScreen" component={OtherScreen} />
+      <Tab.Screen name="ButtonsScreen" component={ButtonsScreen} />
     </Tab.Navigator>
   );
 };
