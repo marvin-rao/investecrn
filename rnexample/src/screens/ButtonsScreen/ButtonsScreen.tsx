@@ -22,6 +22,7 @@ export const ButtonsScreen = () => {
         <DeviceText />
         <View style={{flex: 1}} />
         <Text style={styles.title}>4 Variations of a button</Text>
+        {/* TODO : Use variant prop and move styles inside button */}
         <AppButton
           label="Press me"
           containerStyle={{
