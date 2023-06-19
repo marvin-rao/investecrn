@@ -18,8 +18,8 @@ export const ButtonsScreen = () => {
         ]}
       />
       <View style={styles.formContainer}>
-        <Text style={styles.title}>4 Variations of a button</Text>
         <View style={{flex: 1}} />
+        <Text style={styles.title}>4 Variations of a button</Text>
         <AppButton
           label="Press me"
           containerStyle={{
@@ -69,6 +69,7 @@ const styles = StyleSheet.create({
     padding: 20,
     display: 'flex',
     flexDirection: 'column',
+    flex: 1,
   },
   title: {
     fontSize: 20,
